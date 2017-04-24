@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NAVIGATION</name>
+    <events>
+        <include>SOUND</include>
+        <variable constant="0" name="GLB_FASE" sid="933444054475804" static="0" type="text"></variable>
+        <comment>&gt; Sound: On/Off</comment>
+        <event-block sid="856641315806532">
+            <conditions>
+                <condition id="3" name="On touched object" sid="909816359747809" type="Touch">
+                    <param id="0" name="Object">btSound</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="862147653003942" type="btSound">
+                    <param id="0" name="Instance variable">Touched</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="864401611130474" type="btSound">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="8" name="Set silent" sid="662625703214008" type="Audio">
+                    <param id="0" name="Mode">2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="613554584894003">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="797488366353185" type="btSound">
+                            <param id="0" name="Animation">&quot;ON&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="752515142764264" type="btSound">
+                            <param id="0" name="Animation">&quot;OFF&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363208174903759">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="328069575991959" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="196954671216463" type="btSound">
+                            <param id="0" name="Animation">&quot;ON&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="236421716688098">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="967016898661710" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="446770974044869" type="btSound">
+                            <param id="0" name="Instance variable">Touched</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>&gt; Game Start</comment>
+        <event-block sid="527724807054366">
+            <conditions>
+                <condition id="3" name="On touched object" sid="713274843350028" type="Touch">
+                    <param id="0" name="Object">btPlay</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="601010545358139" type="btPlay">
+                    <param id="0" name="Instance variable">Touched</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="157623297840598" type="btPlay">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="452169501824201" type="btPlay">
+                    <param id="0" name="Animation">&quot;pressed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="532834203312416" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="922503663643624" type="btPlay">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="788698683963790" type="btPlay">
+                    <param id="0" name="Animation">&quot;unpressed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="655459708573095" type="System">
+                    <param id="0" name="Layout">&quot;HOUSE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>&gt; Credits Screen</comment>
+        <event-block sid="856005549166761">
+            <conditions>
+                <condition id="3" name="On touched object" sid="371250034362022" type="Touch">
+                    <param id="0" name="Object">spCredits</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="884358311330021" type="spCredits">
+                    <param id="0" name="Instance variable">Touched</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="126416901849629" type="spCredits">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="520861580996329" type="spCredits">
+                    <param id="0" name="Animation">&quot;pressed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="620613248468454" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="461696894636999" type="System">
+                    <param id="0" name="Layout">&quot;CREDITS&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="241053007348058" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="718830202738394" type="spCredits">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="307764434197817" type="spCredits">
+                    <param id="0" name="Animation">&quot;unpressed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>&gt; Main Menu</comment>
+        <event-block sid="117309995813232">
+            <conditions>
+                <condition id="3" name="On touched object" sid="781847290890903" type="Touch">
+                    <param id="0" name="Object">btMenu</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="909219653364079" type="btMenu">
+                    <param id="0" name="Instance variable">Touched</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="240730988033186" type="btMenu">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="444720224772285" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="516503728760421" type="System">
+                    <param id="0" name="Layout">&quot;MENU&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="557429218478249" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="944164273776465" type="btMenu">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>&gt; House</comment>
+        <event-block sid="600925878642272">
+            <conditions>
+                <condition id="3" name="On touched object" sid="788848320385859" type="Touch">
+                    <param id="0" name="Object">spHouse</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="373269633535450" type="spHouse">
+                    <param id="0" name="Instance variable">Touched</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="255092322135058" type="System">
+                    <param id="0" name="Variable">GLB_FASE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="420030589755051" type="spHouse">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="203573752845346" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="163924574855893" type="System">
+                    <param id="0" name="Layout">&quot;HOUSE&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="187326875523372" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="517296541981724" type="spHouse">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>&gt; Pause: On/Off</comment>
+        <event-block sid="807953447568581">
+            <conditions>
+                <condition id="3" name="On touched object" sid="764112699782839" type="Touch">
+                    <param id="0" name="Object">btPause</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="327543822211113" type="btPause">
+                    <param id="0" name="Instance variable">Touched</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="941992839329119" type="btPause">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="723838865672259">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="782713377671460" type="btPause">
+                            <param id="0" name="Animation">&quot;ON&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="663930898684338" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="741322943833698" type="btPause">
+                            <param id="0" name="Animation">&quot;OFF&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137480393584449">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="924898191487931" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="376776169528344" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="828226859297619" type="btPause">
+                            <param id="0" name="Animation">&quot;ON&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="624908528927916">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="736176519413881" type="btPause">
+                            <param id="0" name="Instance variable">Touched</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>&gt; Fase</comment>
+        <event-block any="1" sid="940418858469578">
+            <conditions>
+                <condition id="3" name="On touched object" sid="116444959930673" type="Touch">
+                    <param id="0" name="Object">spFase</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="836825101270274" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">spFase</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="835097378421723" type="System">
+                    <param id="0" name="Variable">GLB_FASE</param>
+                    <param id="1" name="Value">spFase.FASE</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="789706363981078" type="System">
+                    <param id="0" name="Layout">&quot;FASE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="337107444383887">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="918544336881449" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="347982185809969">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="262782360495668" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;SPLASH&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="700605499299263" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="320786881647624" type="System">
+                            <param id="0" name="Layout">&quot;MENU&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="265287906729376">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="762011302442789" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="110723111166114">
+                            <conditions>
+                                <condition id="3" name="Is silent" sid="849116292184318" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="211691719240695" type="btSound">
+                                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="840413157694463">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="278429227504628" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="872770888475306" type="btSound">
+                                    <param id="0" name="Animation">&quot;ON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="218500008777491">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="598960453694303" type="System">
+                                    <param id="0" name="Variable">GLB_FASE</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;0&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="708959752814408" type="spBallon">
+                                    <param id="0" name="Animation">&quot;BALLOON&quot;&amp;GLB_FASE</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="237298187032885" type="spBackground">
+                                    <param id="0" name="Animation">&quot;FASE&quot;&amp;GLB_FASE</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="981395029853275" type="spObject">
+                                    <param id="0" name="Animation">&quot;OBJECT&quot;&amp;GLB_FASE</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="457896880308289" type="spBallon">
+                                    <param id="0" name="Animation">&quot;BALLOON&quot;&amp;GLB_FASE</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="509910649281966">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="434594171905694" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;HOUSE&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="688280136676132" type="System">
+                    <param id="0" name="Variable">GLB_FASE</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;0&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="277581880056325">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="251294869878486" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="780114618889675" type="arControl">
+                            <param id="0" name="Instance variable">DONE_FASE1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="542857868354311">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="203713716050826" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="700367586263875" type="arControl">
+                            <param id="0" name="Instance variable">DONE_FASE2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="583907786264411">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="784001451933251" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="874316163789390" type="arControl">
+                            <param id="0" name="Instance variable">DONE_FASE3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="441627484553225">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="193133856018972" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="190159049731807" type="arControl">
+                            <param id="0" name="Instance variable">DONE_FASE4</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="826747338656891">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="969256628440130" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="135927340560093" type="arControl">
+                            <param id="0" name="Instance variable">DONE_FASE5</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="823446629473193">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="219547344529522" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="893583236859794" type="arControl">
+                            <param id="0" name="Instance variable">DONE_FASE6</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="820527962143030">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="453273439452297" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="811491692920107">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="297708018952843" type="spTask">
+                    <param id="0" name="Instance variable">FASE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;1&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="994766554494461" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="804036109078193" type="spTask">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="469292599253634">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="754751964213518" type="spTask">
+                    <param id="0" name="Instance variable">FASE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;2&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="927179597353260" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="931764942001425" type="spTask">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528291211961749">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="667667073358485" type="spTask">
+                    <param id="0" name="Instance variable">FASE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;3&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="825612197859415" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="323312101325486" type="spTask">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="403244936164399">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="829219712157046" type="spTask">
+                    <param id="0" name="Instance variable">FASE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;4&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="378654649147767" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="918225698965658" type="spTask">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="667389680851393">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="196463248509362" type="spTask">
+                    <param id="0" name="Instance variable">FASE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;5&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="557361739970662" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="707897693425425" type="spTask">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="273848003731246">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="641038734782426" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE6</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="281466459409861" type="spTask">
+                    <param id="0" name="Instance variable">FASE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;6&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="240647587714457" type="spTask">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

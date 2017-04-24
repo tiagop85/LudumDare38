@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SOUND</name>
+    <events>
+        <variable constant="1" name="CT_MUSICA_MENU" sid="678125291008021" static="0" type="number">1</variable>
+        <variable constant="1" name="CT_MUSICA_GAME" sid="821410008954170" static="0" type="number">2</variable>
+        <event-block sid="564572070435666">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="987890642105331" type="arControl">
+                    <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">arControl.FAIXA_TOCANDO</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="119123903142827">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="500426879825179" type="arControl">
+                            <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CT_MUSICA_MENU</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="460486414453172" type="arControl">
+                            <param id="0" name="Instance variable">FAIXA_TOCANDO</param>
+                            <param id="1" name="Value">CT_MUSICA_MENU</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="907173344492505" type="Audio" />
+                    </actions>
+                </event-block>
+                <event-block sid="207268338053334">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="199851223643969" type="arControl">
+                            <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CT_MUSICA_GAME</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="833642762185025" type="arControl">
+                            <param id="0" name="Instance variable">FAIXA_TOCANDO</param>
+                            <param id="1" name="Value">CT_MUSICA_GAME</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="979815232894444" type="Audio" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="489304757306914">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="176046526052903" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

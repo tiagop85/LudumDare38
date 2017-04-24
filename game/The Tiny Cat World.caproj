@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>The Tiny Cat World</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1mpyls0qn6fmh</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>840</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="full_house_map" sid="666009030110851">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952873486577579" speed="5">
+                    <frame duration="1" hotspotX="0.500143" hotspotY="0.50025" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\full_house_map-01.png">
+                        <collision-poly>
+                            <point x="0.000285633" y="0.00049975" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.000285633" y="0.9995" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spFase" sid="199443775160150">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FASE" sid="678102146643338" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990261021922773" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="627070390978864">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="btMenu" sid="337227388537830">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Touched" sid="515668625287649" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="731597900612449" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T200527Z-001\button_home.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btSound" sid="848542482235764">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Touched" sid="735539599594499" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="ON" pingpong="0" repeatcount="1" repeatto="0" sid="712747135058531" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T200527Z-001\button_sound_on.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OFF" pingpong="0" repeatcount="1" repeatto="0" sid="306814963439411" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T200527Z-001\button_sound_off.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spBackground" sid="829189465402683">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="FASE6" pingpong="0" repeatcount="1" repeatto="0" sid="751837951306530" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-06.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE5" pingpong="0" repeatcount="1" repeatto="0" sid="909244110041415" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-05.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE4" pingpong="0" repeatcount="1" repeatto="0" sid="436226085156254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-04.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE3" pingpong="0" repeatcount="1" repeatto="0" sid="766422791314495" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-03.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE2" pingpong="0" repeatcount="1" repeatto="0" sid="867075142082123" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-02.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE1" pingpong="0" repeatcount="1" repeatto="0" sid="691950919994042" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spHouse" sid="332644895089138">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Touched" sid="302911601647684" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100736191507040" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T200527Z-001\button_back.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spDestiny" sid="839539341072826">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="635727352306504">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="979678034991168">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356846035535606" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spBallon" sid="817107372261170">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="152033601142358">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="BALLOON1" pingpong="0" repeatcount="1" repeatto="0" sid="209508174686964" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\balon_brinquedo.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0526316" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0526316" />
+                            <point x="0.55" y="0.491228" />
+                            <point x="0.45" y="0.807018" />
+                            <point x="0.5" y="0.736842" />
+                            <point x="0.35" y="0.877193" />
+                            <point x="0.5" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="BALLOON2" pingpong="0" repeatcount="1" repeatto="0" sid="314309581813436" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-02_balloon.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0526316" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0526316" />
+                            <point x="0.55" y="0.491228" />
+                            <point x="0.45" y="0.807018" />
+                            <point x="0.5" y="0.736842" />
+                            <point x="0.35" y="0.877193" />
+                            <point x="0.5" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="BALLOON3" pingpong="0" repeatcount="1" repeatto="0" sid="429928066013539" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-03_balloon.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0526316" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0526316" />
+                            <point x="0.35" y="0.491228" />
+                            <point x="0.5" y="0.438596" />
+                            <point x="0.3" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="BALLOON4" pingpong="0" repeatcount="1" repeatto="0" sid="878336860427280" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\balon_caminha.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0526316" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0526316" />
+                            <point x="0.55" y="0.491228" />
+                            <point x="0.45" y="0.807018" />
+                            <point x="0.5" y="0.736842" />
+                            <point x="0.35" y="0.877193" />
+                            <point x="0.5" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="BALLOON5" pingpong="0" repeatcount="1" repeatto="0" sid="646112299813652" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-05_balloon.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0535714" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0535714" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.45" y="0.803571" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.35" y="0.875" />
+                            <point x="0.45" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="BALLOON6" pingpong="0" repeatcount="1" repeatto="0" sid="700475918404665" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-06_balloon.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0526316" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0526316" />
+                            <point x="0.6" y="0.491228" />
+                            <point x="0.6" y="0.859649" />
+                            <point x="0.5" y="0.45614" />
+                            <point x="0.6" y="0.789474" />
+                            <point x="0.55" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spObject" sid="346045239359969">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="537667261520436">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="672239919695712">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="788133661042847">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="314540047885437">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="OBJECT1" pingpong="0" repeatcount="1" repeatto="0" sid="249972117475304" speed="5">
+                    <frame duration="1" hotspotX="0.545455" hotspotY="0.5625" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\caminha.png">
+                        <collision-poly>
+                            <point x="0.266667" y="0.266667" />
+                            <point x="0.466667" y="0.266667" />
+                            <point x="0.6" y="0.4" />
+                            <point x="0.6" y="0.466667" />
+                            <point x="0.933333" y="0.933333" />
+                            <point x="0.466667" y="1" />
+                            <point x="0.266667" y="0.733333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OBJECT2" pingpong="0" repeatcount="1" repeatto="0" sid="342641478917586" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-02_object.png">
+                        <collision-poly>
+                            <point x="0.05" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.95" y="0.1" />
+                            <point x="0.95" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.05" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OBJECT3" pingpong="0" repeatcount="1" repeatto="0" sid="972006737770667" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-03_object.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9" y="0.1" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.9" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OBJECT4" pingpong="0" repeatcount="1" repeatto="0" sid="221485285131393" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-04_object.png">
+                        <collision-poly>
+                            <point x="0.266667" y="0.266667" />
+                            <point x="0.466667" y="0.266667" />
+                            <point x="0.6" y="0.4" />
+                            <point x="0.6" y="0.466667" />
+                            <point x="0.933333" y="0.933333" />
+                            <point x="0.466667" y="1" />
+                            <point x="0.266667" y="0.733333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OBJECT5" pingpong="0" repeatcount="1" repeatto="0" sid="246378755147880" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-05_object.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.7" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.95" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OBJECT6" pingpong="0" repeatcount="1" repeatto="0" sid="664445855227122" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\level-06_object.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.9" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="200160102923004">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="spFloor" sid="963057166219423">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="783063439093932">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="868520061026120" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btPause" sid="366189981714530">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Touched" sid="858236897601401" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="ON" pingpong="0" repeatcount="1" repeatto="0" sid="513953172730811" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T200527Z-001\button_pause.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="OFF" pingpong="0" repeatcount="1" repeatto="0" sid="823110408286643" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T200527Z-001\button_play.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btPlay" sid="897019715242982">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Touched" sid="593737266895147" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395304074772845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spCredits" sid="794086574279629">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Touched" sid="407389370378635" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="503309403447480" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="974173050750153">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type global="1" name="arControl" sid="515932406883348">
+            <plugin id="Arr" />
+            <instance-variables>
+                <instance-variable name="FAIXA_TOCANDO" sid="288630567553000" type="string" />
+                <instance-variable name="FAIXA_A_TOCAR" sid="342584551440183" type="number" />
+                <instance-variable name="DONE_FASE1" sid="742337535835687" type="boolean" />
+                <instance-variable name="DONE_FASE2" sid="190813563829973" type="boolean" />
+                <instance-variable name="DONE_FASE3" sid="747153430432280" type="boolean" />
+                <instance-variable name="DONE_FASE4" sid="598089714214152" type="boolean" />
+                <instance-variable name="DONE_FASE5" sid="509728953206908" type="boolean" />
+                <instance-variable name="DONE_FASE6" sid="220355960338207" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="spCat" sid="631125684323397">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="X_FASE1" sid="368306193906736" type="number" />
+                <instance-variable name="X_FASE2" sid="450876939135271" type="number" />
+                <instance-variable name="X_FASE3" sid="318834365352740" type="number" />
+                <instance-variable name="X_FASE4" sid="416112236482884" type="number" />
+                <instance-variable name="X_FASE5" sid="547580159279593" type="number" />
+                <instance-variable name="X_FASE6" sid="755772335644949" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="SAD" pingpong="0" repeatcount="1" repeatto="0" sid="631357255851997" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\gatineo_caixa (2).png">
+                        <collision-poly>
+                            <point x="0.354167" y="0.485714" />
+                            <point x="0.5" y="0.285714" />
+                            <point x="0.958333" y="0.0571429" />
+                            <point x="0.875" y="0.485714" />
+                            <point x="0.770833" y="0.685714" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1875" y="0.742857" />
+                            <point x="0.145833" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="HAPPY" pingpong="0" repeatcount="1" repeatto="0" sid="351578434102346" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\gatineo_comida (1).png">
+                        <collision-poly>
+                            <point x="0.3" y="0.214286" />
+                            <point x="0.5" y="0.047619" />
+                            <point x="0.833333" y="0.119048" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.8" y="0.857143" />
+                            <point x="0.1" y="0.928571" />
+                            <point x="0.333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spLogo" sid="509968067081269">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954939065218494" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spTask" sid="458149654957234">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FASE" sid="339270647660403" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="PENDING" pingpong="0" repeatcount="1" repeatto="0" sid="433558620708516" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="DONE" pingpong="0" repeatcount="1" repeatto="0" sid="562262252810595" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\level_ok.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.155556" />
+                            <point x="1" y="0.488889" />
+                            <point x="0.844444" y="0.844444" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.155556" y="0.844444" />
+                            <point x="0" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="162636988010933">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129635421029276" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MENU.xml</layout>
+        <layout>CREDITS.xml</layout>
+        <layout>HOUSE.xml</layout>
+        <layout>FASE.xml</layout>
+        <layout>SPLASH.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>NAVIGATION.xml</event-sheet>
+        <event-sheet>SOUND.xml</event-sheet>
+        <event-sheet>EVENT_FASE.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="2">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="20" />
+        <global-instance type="Audio" uid="26">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

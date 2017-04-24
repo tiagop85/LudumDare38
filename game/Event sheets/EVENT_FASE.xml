@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EVENT_FASE</name>
+    <events>
+        <include>NAVIGATION</include>
+        <variable constant="0" name="SPEED" sid="963171213004653" static="0" type="number">100</variable>
+        <variable constant="0" name="MENOS_Y" sid="815719970220418" static="0" type="number">85</variable>
+        <event-block sid="991867457726113">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="924107815826889" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="428533757870581" type="spCat">
+                    <param id="0" name="Animation">&quot;SAD&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="722336979490761" type="btPause">
+                    <param id="0" name="Animation">&quot;ON&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="187318162529141" type="spBallon">
+                    <param id="0" name="Speed">SPEED</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="838664777680145" type="spObject">
+                    <param id="0" name="Speed">SPEED</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="399684195053071" type="spBallon">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="668064996736692" type="spObject">
+                    <param id="0" name="Pin to">spBallon</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="947731063173547" type="spDestiny">
+                    <param id="0" name="Pin to">spCat</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="420767156777069">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="672170126283820" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="801198720175931" type="spCat">
+                            <param id="0" name="X">self.X_FASE1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="578248756737270">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="748131546662038" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="816854610220981" type="spCat">
+                            <param id="0" name="X">self.X_FASE2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="548411086304448">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="939558711267177" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="552188836387934" type="spCat">
+                            <param id="0" name="X">self.X_FASE3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="584530665617830">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="477017917374283" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="757481624149834" type="spCat">
+                            <param id="0" name="X">self.X_FASE4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="364165910553784">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="157243815086843" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="968925964903029" type="spCat">
+                            <param id="0" name="X">self.X_FASE5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="704114148394321">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="941223669870023" type="System">
+                            <param id="0" name="Variable">GLB_FASE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="961668349698397" type="spCat">
+                            <param id="0" name="X">self.X_FASE6</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="456683919582803">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="338697027328482" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">spBallon</param>
+                </condition>
+                <condition id="16" name="On hold over object" sid="367718238915050" type="Touch">
+                    <param id="0" name="Object">spBallon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="650012801643904" type="spBallon" />
+                <action behavior="Pin" id="1" name="Unpin" sid="565960511400889" type="spObject" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="239033922089545" type="spObject">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="907654472782995" type="spObject">
+                    <param id="0" name="Speed">SPEED</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="538257523904316" type="spObject">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="899483563698552">
+            <conditions>
+                <condition id="16" name="On hold over object" sid="156745925707593" type="Touch">
+                    <param id="0" name="Object">spBallon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="506728864745763" type="spBallon" />
+                <action behavior="Pin" id="1" name="Unpin" sid="208205814905466" type="spObject" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="388787015310223" type="spObject">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="953384182248368" type="spObject">
+                    <param id="0" name="Speed">SPEED</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="732517820875912" type="spObject">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="337370055068504">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="141495758572874" type="spObject">
+                    <param id="0" name="Object">spDestiny</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="237733250058368" type="spObject">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="598346792182330" type="spCat">
+                    <param id="0" name="Animation">&quot;HAPPY&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="628022752988496" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="517209313558396" type="System">
+                    <param id="0" name="Layout">&quot;HOUSE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="922512950949770">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="374304549169500" type="spObject">
+                    <param id="0" name="Object">spFloor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="441132098776924" type="spObject">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="336642281964289" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="207722156329346" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
