@@ -4,7 +4,7 @@
     <name>NAVIGATION</name>
     <events>
         <include>SOUND</include>
-        <variable constant="0" name="GLB_FASE" sid="933444054475804" static="0" type="text"></variable>
+        <variable constant="0" name="GLB_FASE" sid="933444054475804" static="0" type="text">&quot;0&quot;</variable>
         <comment>&gt; Sound: On/Off</comment>
         <event-block sid="856641315806532">
             <conditions>
@@ -151,6 +151,10 @@
                     <param id="0" name="Instance variable">Touched</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-10" name="Set value" sid="792367620007866" type="arControl">
+                    <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                    <param id="1" name="Value">CT_MUSICA_MENU</param>
+                </action>
                 <action id="-13" name="Set time scale" sid="444720224772285" type="System">
                     <param id="0" name="Time scale">1</param>
                 </action>
@@ -177,13 +181,17 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="420030589755051" type="spHouse">
+                    <param id="0" name="Instance variable">Touched</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-9" name="Set value" sid="255092322135058" type="System">
                     <param id="0" name="Variable">GLB_FASE</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="420030589755051" type="spHouse">
-                    <param id="0" name="Instance variable">Touched</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-10" name="Set value" sid="402647442422097" type="arControl">
+                    <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                    <param id="1" name="Value">CT_MUSICA_MENU</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="203573752845346" type="System">
                     <param id="0" name="Time scale">1</param>
@@ -295,6 +303,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="208847082186215" type="arControl">
+                            <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                            <param id="1" name="Value">CT_MUSICA_MENU</param>
+                        </action>
                         <action id="-16" name="Wait" sid="700605499299263" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
@@ -582,6 +594,69 @@
             <actions>
                 <action id="4" name="Set animation" sid="240647587714457" type="spTask">
                     <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="357522819757308">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="776159427629684" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE1</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="210096592671493" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE2</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="218857407689181" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE3</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="740305708066166" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE4</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="467833752440191" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE5</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="982714830662894" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE6</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="114359251425660" type="System">
+                    <param id="0" name="Value">0</param>
+                    <param id="1" name="Lower bound">0</param>
+                    <param id="2" name="Upper bound">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="589263189453146" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="713087058818023" type="System">
+                    <param id="0" name="Layout">&quot;CREDITS&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="931662067924126" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="776769796040257" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="997825172353076" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE3</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="348319871112719" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE4</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="751440668659068" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE5</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="139706918107506" type="arControl">
+                    <param id="0" name="Instance variable">DONE_FASE6</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="127166273169039" type="spTask">
+                    <param id="0" name="Animation">&quot;PENDING&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>

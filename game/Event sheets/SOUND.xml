@@ -29,6 +29,12 @@
                             <param id="1" name="Value">CT_MUSICA_MENU</param>
                         </action>
                         <action id="33" name="Stop all" sid="907173344492505" type="Audio" />
+                        <action id="0" name="Play" sid="554568876531674" type="Audio">
+                            <param id="0" name="Audio file">Kevin_MacLeod_-_Double_Polka</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="207268338053334">
@@ -45,6 +51,12 @@
                             <param id="1" name="Value">CT_MUSICA_GAME</param>
                         </action>
                         <action id="33" name="Stop all" sid="979815232894444" type="Audio" />
+                        <action id="0" name="Play" sid="246256364946617" type="Audio">
+                            <param id="0" name="Audio file">Kevin_MacLeod_-_Manic_Polka</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -53,7 +65,14 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="176046526052903" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="4" name="Preload" sid="729816251560064" type="Audio">
+                    <param id="0" name="Audio file">Kevin_MacLeod_-_Double_Polka</param>
+                </action>
+                <action id="4" name="Preload" sid="784098292601107" type="Audio">
+                    <param id="0" name="Audio file">Kevin_MacLeod_-_Manic_Polka</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

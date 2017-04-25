@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="450362309334943">
             <initially-visible>1</initially-visible>
-            <background-color>0,0,204</background-color>
+            <background-color>0,0,0</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>425</x>
-                        <y>246</y>
+                        <x>420</x>
+                        <y>240</y>
                         <z>0</z>
-                        <width>644</width>
-                        <height>331</height>
+                        <width>840</width>
+                        <height>480</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

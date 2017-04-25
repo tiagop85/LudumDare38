@@ -55,7 +55,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952873486577579" speed="5">
-                    <frame duration="1" hotspotX="0.500143" hotspotY="0.50025" original-source="C:\Users\Tiago\Desktop\ludum\ludum\Assets_Game\full_house_map-01.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\full_house_map-01.png">
                         <collision-poly>
                             <point x="0.000285633" y="0.00049975" />
                             <point x="1" y="0" />
@@ -130,23 +130,23 @@
         <object-type name="spBackground" sid="829189465402683">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="FASE6" pingpong="0" repeatcount="1" repeatto="0" sid="751837951306530" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-06.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="FASE5" pingpong="0" repeatcount="1" repeatto="0" sid="909244110041415" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-05.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="FASE4" pingpong="0" repeatcount="1" repeatto="0" sid="436226085156254" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-04.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="FASE3" pingpong="0" repeatcount="1" repeatto="0" sid="766422791314495" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-03.png" />
+                <animation framecount="1" loop="0" name="FASE1" pingpong="0" repeatcount="1" repeatto="0" sid="691950919994042" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-01.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="FASE2" pingpong="0" repeatcount="1" repeatto="0" sid="867075142082123" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-02.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="FASE1" pingpong="0" repeatcount="1" repeatto="0" sid="691950919994042" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-01.png" />
+                <animation framecount="1" loop="0" name="FASE3" pingpong="0" repeatcount="1" repeatto="0" sid="766422791314495" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-03.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE4" pingpong="0" repeatcount="1" repeatto="0" sid="436226085156254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-04.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE5" pingpong="0" repeatcount="1" repeatto="0" sid="909244110041415" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-05.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="FASE6" pingpong="0" repeatcount="1" repeatto="0" sid="751837951306530" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\Assets_Game-20170424T195144Z-001\Assets_Game\house_levels-06.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -459,7 +459,7 @@
         <object-type global="1" name="arControl" sid="515932406883348">
             <plugin id="Arr" />
             <instance-variables>
-                <instance-variable name="FAIXA_TOCANDO" sid="288630567553000" type="string" />
+                <instance-variable name="FAIXA_TOCANDO" sid="612129131052335" type="number" />
                 <instance-variable name="FAIXA_A_TOCAR" sid="342584551440183" type="number" />
                 <instance-variable name="DONE_FASE1" sid="742337535835687" type="boolean" />
                 <instance-variable name="DONE_FASE2" sid="190813563829973" type="boolean" />
@@ -513,7 +513,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954939065218494" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\drive-download-20170424T234533Z-001\splash_screen.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -546,18 +546,37 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129635421029276" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\créditos-03 (1).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="164706465684841">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972389726850806" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\tela_principal-02 (1).png">
+                        <collision-poly>
+                            <point x="0.203682" y="0.292079" />
+                            <point x="0.499425" y="0.249175" />
+                            <point x="0.721519" y="0.39934" />
+                            <point x="0.767549" y="0.5" />
+                            <point x="0.896433" y="0.851485" />
+                            <point x="0.499425" y="0.775578" />
+                            <point x="0.125432" y="0.820132" />
+                            <point x="0.0161105" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>SPLASH.xml</layout>
         <layout>MENU.xml</layout>
-        <layout>CREDITS.xml</layout>
         <layout>HOUSE.xml</layout>
         <layout>FASE.xml</layout>
-        <layout>SPLASH.xml</layout>
+        <layout>CREDITS.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>NAVIGATION.xml</event-sheet>
@@ -587,7 +606,10 @@
         </global-instance>
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="Kevin_MacLeod_-_Double_Polka.ogg" />
+        <file name="Kevin_MacLeod_-_Manic_Polka.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

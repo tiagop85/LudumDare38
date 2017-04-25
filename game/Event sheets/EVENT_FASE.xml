@@ -4,7 +4,8 @@
     <name>EVENT_FASE</name>
     <events>
         <include>NAVIGATION</include>
-        <variable constant="0" name="SPEED" sid="963171213004653" static="0" type="number">100</variable>
+        <variable constant="0" name="SPEED1" sid="963171213004653" static="0" type="number">150</variable>
+        <variable constant="0" name="SPEED2" sid="806282963927350" static="0" type="number">100</variable>
         <variable constant="0" name="MENOS_Y" sid="815719970220418" static="0" type="number">85</variable>
         <event-block sid="991867457726113">
             <conditions>
@@ -20,10 +21,10 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="187318162529141" type="spBallon">
-                    <param id="0" name="Speed">SPEED</param>
+                    <param id="0" name="Speed">SPEED1 + random(SPEED2)</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="838664777680145" type="spObject">
-                    <param id="0" name="Speed">SPEED</param>
+                    <param id="0" name="Speed">spBallon.Bullet.Speed</param>
                 </action>
                 <action behavior="Bullet" id="5" name="Set enabled" sid="399684195053071" type="spBallon">
                     <param id="0" name="State">1</param>
@@ -35,6 +36,10 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="947731063173547" type="spDestiny">
                     <param id="0" name="Pin to">spCat</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="804823876143347" type="arControl">
+                    <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                    <param id="1" name="Value">CT_MUSICA_GAME</param>
                 </action>
             </actions>
             <sub-events>
@@ -142,7 +147,7 @@
                     <param id="0" name="State">1</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="907654472782995" type="spObject">
-                    <param id="0" name="Speed">SPEED</param>
+                    <param id="0" name="Speed">SPEED1</param>
                 </action>
                 <action behavior="Bullet" id="5" name="Set enabled" sid="538257523904316" type="spObject">
                     <param id="0" name="State">1</param>
@@ -162,7 +167,7 @@
                     <param id="0" name="State">1</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="953384182248368" type="spObject">
-                    <param id="0" name="Speed">SPEED</param>
+                    <param id="0" name="Speed">SPEED1</param>
                 </action>
                 <action behavior="Bullet" id="5" name="Set enabled" sid="732517820875912" type="spObject">
                     <param id="0" name="State">1</param>
@@ -185,6 +190,10 @@
                 </action>
                 <action id="-16" name="Wait" sid="628022752988496" type="System">
                     <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-10" name="Set value" sid="133497474374270" type="arControl">
+                    <param id="0" name="Instance variable">FAIXA_A_TOCAR</param>
+                    <param id="1" name="Value">CT_MUSICA_MENU</param>
                 </action>
                 <action id="-25" name="Go to layout (by name)" sid="517209313558396" type="System">
                     <param id="0" name="Layout">&quot;HOUSE&quot;</param>
