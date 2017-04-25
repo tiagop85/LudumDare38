@@ -554,7 +554,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972389726850806" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\tela_principal-02 (1).png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tiago.parente\Downloads\main_screen.png">
                         <collision-poly>
                             <point x="0.203682" y="0.292079" />
                             <point x="0.499425" y="0.249175" />
